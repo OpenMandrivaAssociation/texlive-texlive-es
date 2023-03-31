@@ -1,6 +1,6 @@
 Name:		texlive-texlive-es
 Version:	62677
-Release:	1
+Release:	2
 Summary:	TeX Live manual (Spanish)
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/texlive-es

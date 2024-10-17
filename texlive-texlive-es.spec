@@ -3,7 +3,7 @@ Version:	62677
 Release:	2
 Summary:	TeX Live manual (Spanish)
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/texlive-es
+URL:		https://www.ctan.org/tex-archive/macros/latex/contrib/texlive-es
 License:	
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/texlive-es.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/texlive-es.doc.r%{version}.tar.xz

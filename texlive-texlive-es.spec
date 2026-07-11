@@ -1,33 +1,19 @@
-Name:		texlive-texlive-es
-Version:	62677
-Release:	2
+%global tl_name texlive-es
+%global tl_revision 78678
+
+Name:		texlive-%{tl_name}
+Version:	%{tl_revision}
+Release:	1
 Summary:	TeX Live manual (Spanish)
 Group:		Publishing
-URL:		https://www.ctan.org/tex-archive/macros/latex/contrib/texlive-es
-License:	
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/texlive-es.r%{version}.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/texlive-es.doc.r%{version}.tar.xz
+URL:		https://www.ctan.org/pkg/texlive-es
+License:	LPPL
+Source0:	https://mirrors.ctan.org/systems/texlive/tlnet/archive/texlive-es.r%{tl_revision}.tar.xz
+Source1:	https://mirrors.ctan.org/systems/texlive/tlnet/archive/texlive-es.doc.r%{tl_revision}.tar.xz
 BuildArch:	noarch
-BuildRequires:	texlive-tlpkg
-Requires(pre):	texlive-tlpkg
-Requires(post):	texlive-kpathsea
+BuildSystem:	texlive
+Provides:	texlive(%{tl_name}) = %{tl_revision}
 
 %description
+TeX Live manual (Spanish)
 
-%prep
-%autosetup -p1 -c -a1
-
-%build
-
-%install
-rm -rf tlpkg
-mkdir -p %{buildroot}%{_texmfdistdir}
-cp -a * %{buildroot}%{_texmfdistdir}
-
-%files
-%doc %{_texmfdistdir}/doc/texlive/texlive-es
-
-%post -p %{_sbindir}/texlive.post
-
-%postun
-[ "$1" -eq 0 ] && %{_sbindir}/texlive.post
